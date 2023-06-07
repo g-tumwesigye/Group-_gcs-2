@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Function to generate a random number
+generate_random_number() {
+  echo $((RANDOM % 100))
+}
+
+# Generate two random numbers
+number1=$(generate_random_number)
+number2=$(generate_random_number)
+# Calculate square root of each number
+result1=$(echo "sqrt($number1)" | bc -l)
+result2=$(echo "sqrt($number2)" | bc -l)
+
+# Print the results
+echo "Random Number 1: $number1"
+echo "Square Root of Random Number 1: $result1"
+echo "Random Number 2: $number2"
+echo "Square Root of Random Number 2: $result2"
