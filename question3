@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "Enter a sentence:"
+read sentence
+word_count=$(echo -n "$sentence" | wc -w)
+echo "the number of words is:" $word_count
+space_count=$(echo -n "$sentence" | tr -cd ' ' | wc -m)
+echo "the number of white spaces is:" $space_count
